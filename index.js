@@ -6,10 +6,17 @@ const headers = {
   'Content-Length': 1
 };
 
+const killHeaders = res => {
+  const headers = ['Date', 'Connection', 'Transfer-Encoding'];
+  headers.map(h => res.removeHeader(h));
+  res.flushHeaders();
+  res.maxHeadersCount = -1;
+};
 
 const content = 'k';
 
 http.createServer((req, res) => {
-  res.writeHead(200, headers);
-  res.end(content, 'utf-8');
+  killHeaders(res);
+  res.write(content, 'utf-8');
+  res.end();
 }).listen(PORT);
