@@ -1,0 +1,19 @@
+{
+  "name": "onebytesite",
+  "version": "1.0.0",
+  "description": "It's a one byte site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolyaventuri/onebyte.git"
+  },
+  "author": "Kolya Venturi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kolyaventuri/onebyte/issues"
+  },
+  "homepage": "https://github.com/kolyaventuri/onebyte#readme"
+}
