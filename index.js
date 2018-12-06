@@ -1,4 +1,5 @@
 const http = require('http');
+const PORT = process.env.port || 5000;
 
 const headers = {
   'Content-Type': 'text/plain',
@@ -11,4 +12,4 @@ const content = 'k';
 http.createServer((req, res) => {
   res.writeHead(200, headers);
   res.end(content, 'utf-8');
-}).listen(3000);
+}).listen(PORT);
